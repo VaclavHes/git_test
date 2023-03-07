@@ -1,0 +1,170 @@
+Last login: Mon Mar  6 19:50:43 on ttys000
+Vaclavs-MacBook-Pro:~ vaclavhes$ git --version
+git version 2.39.2
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --global user.email "127162276+VaclavHes@users.noreply.github.com"
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --global init.defaultBranch main
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --global color.ui auto
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --global pull.rebase false
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --get user.name
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --get user.email
+127162276+VaclavHes@users.noreply.github.com
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --global user.name "Vaclav Hes"
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --get user.name
+Vaclav Hes
+Vaclavs-MacBook-Pro:~ vaclavhes$ echo .DS_Store >> ~/.gitignore_global
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --global core.excludesfile ~/.gitignore_global
+Vaclavs-MacBook-Pro:~ vaclavhes$ ls ~/.ssh/id_ed25519.pub
+ls: /Users/vaclavhes/.ssh/id_ed25519.pub: No such file or directory
+Vaclavs-MacBook-Pro:~ vaclavhes$ -Cvhes@wesleyan.edu
+-bash: -Cvhes@wesleyan.edu: command not found
+Vaclavs-MacBook-Pro:~ vaclavhes$ -C vhes@wesleyan.edu
+-bash: -C: command not found
+Vaclavs-MacBook-Pro:~ vaclavhes$ ssh-keygen -t ed25519 -C vhes@wesleyan.edu
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/vaclavhes/.ssh/id_ed25519): 
+Created directory '/Users/vaclavhes/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/vaclavhes/.ssh/id_ed25519.
+Your public key has been saved in /Users/vaclavhes/.ssh/id_ed25519.pub.
+The key fingerprint is:
+SHA256:tWIqTX42Ia7Z2BC0EYLEkHsEQQTa4EtQCrImKj1ERM0 vhes@wesleyan.edu
+The key's randomart image is:
++--[ED25519 256]--+
+|^%*o.            |
+|OB..E.           |
+|=*o o     .      |
+|*oo. o   . .     |
+|ooo o o S .      |
+|.  . * + o       |
+|    o = +        |
+|     O o .       |
+|    + o          |
++----[SHA256]-----+
+Vaclavs-MacBook-Pro:~ vaclavhes$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDWG7H9fflR9MKa/ffZRICMYwjYJ5ygtuRGrakOu3i3d vhes@wesleyan.edu
+Vaclavs-MacBook-Pro:~ vaclavhes$ $ ssh -T git@github.com
+-bash: $: command not found
+Vaclavs-MacBook-Pro:~ vaclavhes$ ssh -T git@github.com
+The authenticity of host 'github.com (140.82.112.4)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,140.82.112.4' (ECDSA) to the list of known hosts.
+Hi VaclavHes! You've successfully authenticated, but GitHub does not provide shell access.
+Vaclavs-MacBook-Pro:~ vaclavhes$ git --version
+git version 2.39.2
+Vaclavs-MacBook-Pro:~ vaclavhes$ git config --global init.defaultBranch main
+Vaclavs-MacBook-Pro:~ vaclavhes$ cd repos
+-bash: cd: repos: No such file or directory
+Vaclavs-MacBook-Pro:~ vaclavhes$ mkdir repos git@github.com:VaclavHes/git_test.git
+mkdir: git@github.com:VaclavHes: No such file or directory
+Vaclavs-MacBook-Pro:~ vaclavhes$ mkdir repos
+mkdir: repos: File exists
+Vaclavs-MacBook-Pro:~ vaclavhes$ git@github.com:VaclavHes/git_test.git
+-bash: git@github.com:VaclavHes/git_test.git: No such file or directory
+Vaclavs-MacBook-Pro:~ vaclavhes$ cd ~
+Vaclavs-MacBook-Pro:~ vaclavhes$ cd
+Vaclavs-MacBook-Pro:~ vaclavhes$ mkdir repos
+mkdir: repos: File exists
+Vaclavs-MacBook-Pro:~ vaclavhes$ cd repos/
+Vaclavs-MacBook-Pro:repos vaclavhes$ /repos git@github.com:VaclavHes/git_test.git
+-bash: /repos: No such file or directory
+Vaclavs-MacBook-Pro:repos vaclavhes$ repos git@github.com:VaclavHes/git_test.git
+-bash: repos: command not found
+Vaclavs-MacBook-Pro:repos vaclavhes$ ~/repos git@github.com:VaclavHes/git_test.git
+-bash: /Users/vaclavhes/repos: is a directory
+Vaclavs-MacBook-Pro:repos vaclavhes$ ~/repos git clone git@github.com:VaclavHes/git_test.git
+-bash: /Users/vaclavhes/repos: is a directory
+Vaclavs-MacBook-Pro:repos vaclavhes$ git@github.com:VaclavHes/git_test.git
+-bash: git@github.com:VaclavHes/git_test.git: No such file or directory
+Vaclavs-MacBook-Pro:repos vaclavhes$ git clone git@github.com:VaclavHes/git_test.git
+Cloning into 'git_test'...
+Warning: Permanently added the ECDSA host key for IP address '140.82.112.3' to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+Vaclavs-MacBook-Pro:repos vaclavhes$ ouch hello_world.txt
+-bash: ouch: command not found
+Vaclavs-MacBook-Pro:repos vaclavhes$ touch hello_world.txt
+Vaclavs-MacBook-Pro:repos vaclavhes$ cd git_test
+Vaclavs-MacBook-Pro:git_test vaclavhes$ git remote -v
+origin	git@github.com:VaclavHes/git_test.git (fetch)
+origin	git@github.com:VaclavHes/git_test.git (push)
+Vaclavs-MacBook-Pro:git_test vaclavhes$ touch hello_world.txt
+Vaclavs-MacBook-Pro:git_test vaclavhes$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Vaclavs-MacBook-Pro:git_test vaclavhes$ git add hello_world.txt
+Vaclavs-MacBook-Pro:git_test vaclavhes$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   hello_world.txt
+
+Vaclavs-MacBook-Pro:git_test vaclavhes$ git commit -m "Add hello_world.txt"
+[main d251e99] Add hello_world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+Vaclavs-MacBook-Pro:git_test vaclavhes$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Vaclavs-MacBook-Pro:git_test vaclavhes$ git log
+commit d251e99fecc3fbf6c809b11c1a0a0e778218a451 (HEAD -> main)
+Author: Vaclav Hes <127162276+VaclavHes@users.noreply.github.com>
+Date:   Mon Mar 6 20:44:53 2023 -0500
+
+    Add hello_world.txt
+
+commit 369c5e11998841126100e4396ad4c9dd5a466b12 (origin/main, origin/HEAD)
+Author: VaclavHes <127162276+VaclavHes@users.noreply.github.com>
+Date:   Mon Mar 6 20:31:57 2023 -0500
+
+    Initial commit
+Vaclavs-MacBook-Pro:git_test vaclavhes$ code .
+-bash: code: command not found
+Vaclavs-MacBook-Pro:git_test vaclavhes$ README.md
+-bash: README.md: command not found
+Vaclavs-MacBook-Pro:git_test vaclavhes$ code . README.md
+-bash: code: command not found
+Vaclavs-MacBook-Pro:git_test vaclavhes$ % nano README.md
+-bash: fg: %: no such job
+Vaclavs-MacBook-Pro:git_test vaclavhes$ nano README.md
+
+  GNU nano 2.0.6                   File: README.md                                  Modified  
+
+# git_test
+
+Hello Odin!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help    ^O WriteOut    ^R Read File   ^Y Prev Page   ^K Cut Text    ^C Cur Pos
+^X Exit        ^J Justify     ^W Where Is    ^V Next Page   ^U UnCut Text  ^T To Spell
+
+
